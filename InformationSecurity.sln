@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InformationSecurity", "InformationSecurity.csproj", "{256DF3A9-EA64-4B68-B50C-7E911444207E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{256DF3A9-EA64-4B68-B50C-7E911444207E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{256DF3A9-EA64-4B68-B50C-7E911444207E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{256DF3A9-EA64-4B68-B50C-7E911444207E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{256DF3A9-EA64-4B68-B50C-7E911444207E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EEC5D3A8-464C-44F5-A255-E888E292F133}
+	EndGlobalSection
+EndGlobal
