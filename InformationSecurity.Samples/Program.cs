@@ -48,17 +48,17 @@ namespace InformationSecurity
 
         private static void Main(string[] args)
         {
-            Console.WriteLine("Запись MAC-кода в конец файла");
-            string path = GetPathFormConsole("Введите имя файла для хранения ключевой информации генератора MAC-кода:");
+            Console.WriteLine("Проверка файла и чтение MAC-кода из конца файла");
+            string path = GetPathFormConsole("Введите имя файла с ключевой информацией генератора MAC-кода:");
             string sourcePath = GetPathFormConsole("Введите имя исходного файла:");
             string targetPath = GetPathFormConsole("Введите имя целевого файла:");
 
-            DES enc = new DES();
-            enc.Initialize();
-            enc.SerializeToFile(path);
+            DES enc = DES.DeserializeFromFile(path);
 
-            long mac = MAC.Calculate(enc, sourcePath, targetPath);
-            Console.WriteLine("MAC-код файла: 0x{0:x16}", mac);
+            var pair = MAC.Validate(enc, sourcePath, targetPath);
+            Console.WriteLine("Вычисленный MAC-код файла: 0x{0:x16}", pair.Item1);
+            Console.WriteLine("Записанный MAC-код в файл: 0x{0:x16}", pair.Item2);
+            Console.WriteLine("MAC-коды " + (pair.Item1 == pair.Item2 ? "" : "не ") + "совпадают.");
             Console.WriteLine("Для продолжения нажмите любую клавишу. . .");
             Console.ReadKey();
         }
